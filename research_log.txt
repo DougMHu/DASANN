@@ -1,0 +1,34 @@
+
+- consider log scale LUT entries for max* correction table
+- save the BEST weights, not the LAST weights
+- Catch SigInt in case it takes too long…
+
+Questions:
+- vanishing gradient?
+	- Try making earlier layers more sparse than later layers. Does this help?
+
+- 
+
+Log Domain Approx impelementation:
+Make 3 revisions of feedforward
+v replace dot product with a map function
+	v keep multiply operations a traditional multiply
+	v keep add operations a traditional add
+	v check that we get the SAME CLASSIFICATION ACCURACY.
+	v replace backprop also...
+v replace multiply and add functions with the equivalent log domain ops
+	v replace multiply op with Log Domain Multiply
+	v replace add op with Log Domain Add
+	v check that we get the SAME CLASSIFICATION ACCURACY.
+- replace Log Domain ops with Approximations
+	- replace with the linear approx
+	v replace with the LUT approx
+
+
+Answered:
+- actually, most state of the art image recognition use convolutional NN architecture... should I use this to compare? NO.
+- comparable to fully connected network? ALMOST.
+- Optimized for hyper parameters? YES.
+- could implement a weights matrix with only 1 nonzero in each column..? NOT NECESSARY.
+- how deep of a NN should I experiment with? GO DEEPER
+- Should I continue to use sigmoid funciton and cross-entropy cost? Is ln() precision on FPGA good enough? YES, we just need to figure out minimum number entries in LUT

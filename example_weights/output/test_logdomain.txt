@@ -1,0 +1,157 @@
+
+start:  Tue Apr  5 07:51:31 2016
+
+input: ../networks/sparse10_hidden4.json
+
+Without Log Domain Approximation...
+Accuracy on validation data: 9091 / 10000
+
+With Log Domain Approximation...
+Accuracy on validation data: 9047 / 10000
+
+stop:  Tue Apr  5 07:59:34 2016
+
+###########################################
+
+start:  Tue Apr  5 07:59:34 2016
+
+input: ../networks/sparse20_hidden3.json
+
+Without Log Domain Approximation...
+Accuracy on validation data: 9486 / 10000
+
+With Log Domain Approximation...
+Accuracy on validation data: 9194 / 10000
+
+stop:  Tue Apr  5 08:07:56 2016
+
+###########################################
+
+start:  Tue Apr  5 08:07:56 2016
+
+input: ../networks/sparse50_hidden3.json
+
+Without Log Domain Approximation...
+Accuracy on validation data: 9600 / 10000
+
+/Users/douglashu/Documents/Documents_recovered/Douglas/USC/research/example_weights/src/LogNetwork.py:660: RuntimeWarning: overflow encountered in exp
+  return 1.0/(1.0+np.exp(-z))
+  
+With Log Domain Approximation...
+Accuracy on validation data: 8280 / 10000
+
+stop:  Tue Apr  5 08:18:46 2016
+
+###########################################
+
+start:  Tue Apr  5 08:18:46 2016
+
+input: ../networks/sparse100_hidden3.json
+
+Without Log Domain Approximation...
+Accuracy on validation data: 9661 / 10000
+
+With Log Domain Approximation...
+Accuracy on validation data: 7655 / 10000
+
+stop:  Tue Apr  5 08:37:16 2016
+
+###########################################
+
+start:  Tue Apr  5 08:37:16 2016
+
+input: ../networks/sparse20_hidden4.json
+
+Without Log Domain Approximation...
+Accuracy on validation data: 9387 / 10000
+
+With Log Domain Approximation...
+Accuracy on validation data: 8774 / 10000
+
+stop:  Tue Apr  5 08:44:11 2016
+
+###########################################
+
+start:  Tue Apr  5 08:44:11 2016
+
+input: ../networks/sparse50_hidden4.json
+
+Without Log Domain Approximation...
+Accuracy on validation data: 9608 / 10000
+
+With Log Domain Approximation...
+Accuracy on validation data: 7251 / 10000
+
+stop:  Tue Apr  5 08:55:59 2016
+
+###########################################
+###########################################
+###########################################
+
+input: "../networks/sparse10_hidden3.json"
+output:
+Without Log Domain Approximation...
+Accuracy on validation data: 9078 / 10000
+
+With Log Domain Approximation...
+Accuracy on validation data: 9052 / 10000
+
+###########################################
+
+input: "../networks/sparse10_hidden4.json"
+output:
+Without Log Domain Approximation...
+Accuracy on validation data: 9091 / 10000
+
+With Log Domain Approximation...
+Accuracy on validation data: 9054 / 10000
+
+start: 1:07
+end: 1:12
+
+###########################################
+
+input: "../networks/sparse20_hidden3.json"
+output:
+Without Log Domain Approximation...
+Accuracy on validation data: 9486 / 10000
+
+With Log Domain Approximation...
+Accuracy on validation data: 9194 / 10000
+
+start: 1:18
+end: 1:28
+
+###########################################
+
+start:  Tue Apr  5 01:49:42 2016
+
+Without Log Domain Approximation...
+Accuracy on validation data: 9078 / 10000
+
+With Log Domain Approximation...
+Accuracy on validation data: 8877 / 10000
+
+stop:  Tue Apr  5 01:57:34 2016
+
+###########################################
+
+start:  Tue Apr  5 02:06:15 2016
+
+With Math=0 Arithmetic...
+Accuracy on validation data: 9078 / 10000
+
+With Math=1 Arithmetic...
+Accuracy on validation data: 9078 / 10000
+
+With Math=2 Arithmetic...
+Accuracy on validation data: 9078 / 10000
+
+With Math=3 Arithmetic...
+Accuracy on validation data: 8877 / 10000
+
+stop:  Tue Apr  5 02:06:15 2016
+
+
+
+
