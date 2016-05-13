@@ -41,9 +41,22 @@ main(training_data, validation_data, test_data,
 	mini_batch_size = 1,
 	eta = 0.1,
 	lmbda = 0.0,
-	early_stopping_n = 30)
+	early_stopping_n = 30,
+	conn = None)
 ```
 This means we are creating a neural network with an input layer of 784 neurons, 4 hidden layers of 30 neurons, and an output layer of 10 neurons. In any layer, only 1/10 of the neurons are connected to the next layer (These connections are uniformly randomly chosen). SGD will do "online learning" and train on all the input data 60 times over. However, if there is no improvement in classification accuracy after 30 epochs, training will terminate prematurely. The learning rate is 0.1 with no regularization.
+
+Instead of using randomly chosen connections, you can create the network with predefined connections by passing the adjacency matrices as input to `conn`. For example:
+```
+# run sparse network
+main(training_data, validation_data, test_data,
+	filename = jsonFile, 
+	sparsity = 0.1,
+	layers = [784, 30, 30, 30, 30, 10],
+	... ,
+	conn = DRP_matrices)
+```
+Here, DRP_matrices can be a list of adjacency matrices created by the `DRP/interleaver_to_matrix.py` script. See the [Clash-free Permutations](#link1) Section for details. NOTE that in this case, the `sparsity` input has no effect on the network connections, because they are overwritten by the `conn` input.
 
 To change between the (faster) dot product arithmetic and the (much slower) Log-Domain arithmetic, modify the Network instantiation:
 ```
@@ -80,7 +93,7 @@ $ python weights_histograms.py
 ```
 The histograms will be displayed to the screen.
 
-### Clash-free Permutations
+### <a name="link1"></a>Clash-free Permutations
 
 The `DRP/interleaver_to_matrix.py` provides helper functions for converting [Dithered Relative Prime interleavers][crozier] into adjacency matrices in the context of neural networks.
 
